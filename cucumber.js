@@ -1,3 +1,6 @@
-module.exports = {
-  default: `--format progress-bar --format json:reports/allure-results/result.json`
-};
+module.exports =
+  {
+    default: "--require features/step_definitions/*.js --format json:reports/report.json"
+  }
+  
+
