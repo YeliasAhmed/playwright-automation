@@ -1,22 +1,24 @@
 const { Given, When, Then, Before, After, setDefaultTimeout } = require('@cucumber/cucumber');
+
+
 const { expect } = require('@playwright/test');
-const { chromium } = require('playwright');
+// const { chromium } = require('playwright');
 require('dotenv').config();
-const { POManager } = require('../../pageobjects/POManager');
+// const { POManager } = require('../../pageobjects/POManager');
 
 setDefaultTimeout(60 * 1000); // increase timeout
 
-// Hooks
-Before(async function () {
-  this.browser = await chromium.launch({ headless: false });
-  this.context = await this.browser.newContext();
-  this.page = await this.context.newPage();
-  this.poManager = new POManager(this.page);
-});
+// // Hooks
+// Before(async function () {
+//   this.browser = await chromium.launch({ headless: false });
+//   this.context = await this.browser.newContext();
+//   this.page = await this.context.newPage();
+//   this.poManager = new POManager(this.page);
+// });
 
-After(async function () {
-  await this.browser.close();
-});
+// After(async function () {
+//   await this.browser.close();
+// });
 
 // Steps
 Given('I launch the browser', async function () {

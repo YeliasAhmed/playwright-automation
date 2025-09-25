@@ -5,7 +5,7 @@ class POManager {
   }
   getHomePage() {
     if (!this.homePage) {
-      const { HomePage } = require('./HomePage');
+      const { HomePage } = require('../pageobjects/HomePage');
       this.homePage = new HomePage(this.page);
     }
     return this.homePage;
