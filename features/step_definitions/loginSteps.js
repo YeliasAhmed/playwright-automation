@@ -21,11 +21,8 @@ setDefaultTimeout(60 * 1000); // increase timeout
 // });
 
 // Steps
-Given('I launch the browser', async function () {
-  // browser is already launched in Before
-});
 
-When('I navigate to the application', async function () {
+Given('I navigate to the application', async function () {
   await this.page.goto(process.env.BASE_URL);
 });
 
